@@ -8,9 +8,7 @@ steps:
       - cd frontend
       - npm install
       - npm run build
-
-
----
+#---
 #kind: pipeline
 #name: test
 #
