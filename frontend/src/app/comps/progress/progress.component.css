@@ -1,0 +1,17 @@
+:host {
+  display: flex;
+  width: 100%;
+  height: 10px;
+}
+
+.correct {
+  background: #6ab04c;
+}
+
+.failed {
+  background: #eb4d4b;
+}
+
+.unanswered {
+  background: #95afc0;
+}

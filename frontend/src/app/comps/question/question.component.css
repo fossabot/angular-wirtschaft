@@ -1,0 +1,34 @@
+:host {
+  display: block;
+}
+
+.answers {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+
+.radio ::ng-deep .button {
+  border-radius: 100%;
+}
+
+.title {
+  font-size: 1em;
+  font-weight: bold;
+  margin: 16px;
+  margin-bottom: 0;
+}
+
+.correct {
+  text-decoration: underline;
+}
+
+.answer {
+
+}
+
+.question {
+  font-size: 1.5em;
+  margin: 16px;
+  margin-top: 0;
+}

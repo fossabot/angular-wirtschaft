@@ -1,0 +1,18 @@
+:host {
+  display: block;
+}
+
+.question {
+  padding-top: 16px;
+}
+
+.actions {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  justify-content: flex-end;
+}
+
+.container {
+  max-width: 800px;
+}

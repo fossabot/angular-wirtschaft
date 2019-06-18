@@ -1,0 +1,9 @@
+<span class="title">{{type}}</span>
+<div class="question">{{question.question}}</div>
+<div class="answers">
+  <app-answer class="answer" [answer]="answer" [ngClass]="{'correct': isCorrect(answer), 'radio': isRadio}"
+              (selectedChanged)="selected(answer, $event)"
+              [disabled]="showSolution"
+              [selected]="isSelected(answer)"
+              *ngFor="let answer of question.answers"></app-answer>
+</div>

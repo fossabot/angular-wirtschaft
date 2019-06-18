@@ -1,0 +1,14 @@
+:host {
+  margin: 8px 16px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+}
+
+.button {
+  width: 38px;
+  padding: 0;
+  flex-shrink: 0;
+  margin-right: 8px;
+  margin-bottom: 0;
+}
