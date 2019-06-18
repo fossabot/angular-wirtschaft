@@ -6,9 +6,11 @@
     "start": "ng serve",
     "build": "ng build",
     "test": "ng test",
+    "test:ci": "ng test --browsers ChromeHeadless --watch false",
     "lint": "ng lint",
     "e2e": "ng e2e",
-    "deploy": "ng build && firebase deploy"
+    "deploy": "ng build && firebase deploy",
+    "deploy:ci": "ng build && firebase deploy --token a"
   },
   "private": true,
   "dependencies": {

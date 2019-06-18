@@ -2,16 +2,18 @@ import {TestBed} from '@angular/core/testing';
 
 import {GameService} from './game.service';
 import {QuestionService} from './question.service';
-import {StateService} from './state.service';
+import {GameState, StateService} from './state.service';
 
 describe('GameService', () => {
-  const state = {
+  const state: GameState = {
     answers: {
       a: {wrongCount: 1, correctCount: 0},
       b: {wrongCount: 2, correctCount: 0},
       c: {wrongCount: 1, correctCount: 1},
     },
     index: 0,
+    questions: [],
+    progress: {total: 0, correct: 0, unanswered: 0, failed: 0},
   };
 
   const questions = [

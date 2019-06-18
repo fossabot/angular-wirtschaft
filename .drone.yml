@@ -1,0 +1,43 @@
+kind: pipeline
+name: build
+
+steps:
+  - name: build
+    image: node:10.16.0-alpine
+    commands:
+      - cd frontend
+      - npm install
+      - npm run build
+
+
+---
+#kind: pipeline
+#name: test
+#
+#steps:
+#  - name: test
+#    image: zenika/alpine-chrome:with-node
+#    commands:
+#      - cd frontend
+#      - npm install
+#      - npm run test:ci
+
+---
+kind: pipeline
+name: deploy
+
+steps:
+  - name: deploy
+    image: node:10.16.0-alpine
+    environment:
+      TOKEN:
+        from_secret: firebase_token
+    commands:
+      - cd frontend
+      - npm install
+      - npm run deploy:ci
+    when:
+      branch:
+        - master
+      event:
+        - push
