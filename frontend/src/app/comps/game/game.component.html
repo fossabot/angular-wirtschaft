@@ -9,6 +9,7 @@
   <div *ngIf="!currentQuestion">Loading</div>
 
   <div class="actions">
+    <button class="button button-large skip" (click)="skip()" *ngIf="!checked">Skip</button>
     <button class="button button-large button-black" (click)="check()" *ngIf="!checked">Check</button>
     <button class="button button-large button-black" [className]="checkCssClasses" (click)="next()" *ngIf="checked">Next</button>
   </div>

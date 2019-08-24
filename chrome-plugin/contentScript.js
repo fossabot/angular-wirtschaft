@@ -2,8 +2,8 @@ let question = '';
 
 const timeout = 500;
 
-const answers = $('.answer .m-l-1');
-const listAnswer = $('.answer .m-l-1 ol')[0];
+const answers = $('.answer .ml-1');
+const listAnswer = $('.answer .ml-1 ol')[0];
 const answerText = answers.toArray().map(i =>
     cleanStr($(i).clone()
         .find('span:first')
@@ -29,6 +29,8 @@ async function main() {
         $('.answer input')[0].checked = true;
         question = cleanStr($('.qtext').text());
     }
+
+    console.log(question, answerText);
 
     if (!question || answerText.length === 0) {
         return;

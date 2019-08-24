@@ -21,7 +21,7 @@ export class QuestionComponent implements OnInit, OnChanges {
   checkedAnswersChanged = new EventEmitter<string[]>();
 
   get isRadio() {
-    return this.question.type === 'radio';
+    return this.question.type === 'radio' && this.question.correctAnswers.length === 1;
   }
 
   get type() {

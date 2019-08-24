@@ -36,6 +36,10 @@ export class GameComponent implements OnInit {
     }
   }
 
+  skip() {
+    this.next();
+  }
+
   async next() {
     this.checked = false;
     this.currentQuestion = await this.game.nextQuestion();

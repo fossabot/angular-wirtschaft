@@ -10,7 +10,12 @@
   display: flex;
   align-items: center;
   padding: 16px;
-  justify-content: flex-end;
+  justify-content: space-between;
+}
+
+.skip {
+  background: #606c76;
+  border: 1px solid #606c76;
 }
 
 .container {

@@ -24,7 +24,8 @@ export class GameService {
     }
 
     const questions = await this.question.getQuestions();
-    state.questions = questions.sort((a, b) => {
+    state.questions = questions.filter(q => q.answers.some(a => !!a));
+    state.questions = state.questions.sort((a, b) => {
       const answerA = state.answers[a.question];
       const answerB = state.answers[b.question];
 
@@ -53,7 +54,7 @@ export class GameService {
 
     let correct = true;
     for (const answer of answers) {
-      if (question.correctAnswers.indexOf(answer) === -1) {
+      if (answer && question.correctAnswers.indexOf(answer) === -1) {
         correct = false;
       }
     }
